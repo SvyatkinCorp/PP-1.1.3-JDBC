@@ -17,23 +17,7 @@ public class Util {
     private static final String DIALECT = "org.hibernate.dialect.MySQLDialect";
     private static final String DRIVER = "com.mysql.cj.jdbc.Driver";
     private static SessionFactory sessionFactory;
-    private static Connection connection;
-
-    public Util() {
-    }
-
-    public static Connection getConnection() {
-
-        try {
-            connection = DriverManager.getConnection(URL, USER, PASSWORD);
-            if (!connection.isClosed()) {
-                System.out.println("Мы законектились");
-            }
-        } catch (SQLException e) {
-            System.out.println("Error: " + e.getMessage());
-        }
-        return connection;
-    }
+ 
 
     public static SessionFactory createSessionFactory() {
         if (sessionFactory == null) {
