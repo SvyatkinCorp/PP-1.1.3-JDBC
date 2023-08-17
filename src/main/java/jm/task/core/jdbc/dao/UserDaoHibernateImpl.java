@@ -11,10 +11,8 @@ import java.util.List;
 public class UserDaoHibernateImpl implements UserDao {
     private static final String TABLENAME = "users";
 
-    public UserDaoHibernateImpl() {
-    }
 
-    // Создание таблицы для User(ов) – не должно приводить к исключению, если такая таблица уже существует
+
     @Override
     public void createUsersTable() {
         Transaction transaction = null;
